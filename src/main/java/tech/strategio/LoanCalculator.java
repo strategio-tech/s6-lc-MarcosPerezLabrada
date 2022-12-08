@@ -8,12 +8,16 @@ public class LoanCalculator {
      * TODO: finish out this JavaDoc comment block.
      * FIXME: WHAT DOES THIS METHOD DO?
      * 
-     * @param ???
-     * @return ???
+     * @param int amount that represents the original debt
+     * @return int that represents the remaining amount after 3 Months paying 10% of the monthly balance.
      */
     static int getRemainingAmountIn3Months(int amount) {
-        // TODO: Rewrite this method
-        return -1;
+        int remaining= amount;
+        for(int i = 0; i < 3 ; i++)
+        {
+            remaining = remaining- (int)( 0.1 *remaining);
+        }
+        return remaining;
     }
 
     public static void main(String[] args) {
